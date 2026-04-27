@@ -1,6 +1,21 @@
 # Process Watchdog
 
-Windows tray watchdog that automatically shuts down background bloat processes based on app visibility/running state.
+**In plain English:** a small Windows app that sits in your **system tray** and can **close leftover background programs** when you are not actively using the “main” app (for example helpers/updaters). You choose which apps it manages on first run and in the dashboard.
+
+**Important:** this tool **ends processes**. Use it only if you understand that, start with **defaults / fewer profiles**, and use **Pause** if something misbehaves. It is **Windows-only**.
+
+---
+
+## I just want the app (no coding)
+
+1. Open **[Releases](https://github.com/somaqzz12/killswitch-for-all-apps-on-windows-/releases)** on GitHub.
+2. Under the latest release, download **`ProcessWatchdog.exe`** (when a release is published with that file).
+3. Double-click it. Pick apps in the welcome screen. The icon appears in the tray near the clock.
+4. **Fully quit:** right-click the tray icon → **Exit**. Closing the window does **not** stop the tray app unless you exit from the tray.
+
+If there is **no EXE on Releases yet**, either ask the maintainer to attach one, or build it once on a PC with Python: run **`BUILD.bat`** → take **`dist\ProcessWatchdog.exe`**.
+
+---
 
 ## Key features
 
@@ -12,13 +27,11 @@ Windows tray watchdog that automatically shuts down background bloat processes b
 - Optional idle-kill logic
 - Configurable close behavior (`X` can close or minimize)
 
-## Install and run
+## Install and run (developers)
 
 ### End users (EXE)
 
-1. Download `ProcessWatchdog.exe` from the latest release.
-2. Run it once and choose your profiles.
-3. App stays in system tray and starts with Windows.
+Same steps as **“I just want the app”** above: Releases → `ProcessWatchdog.exe`.
 
 ### Developers (source)
 
