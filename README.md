@@ -35,9 +35,13 @@ Install Python, open this folder, run **`BUILD.bat`**, then grab **`dist\Process
 
 ---
 
+## App icon (EXE / shortcut)
+
+**`ProcessWatchdog.exe`** uses **`icon.ico`**, built from **`assets/app_icon.png`**. To swap art: replace the PNG, run **`python scripts/make_icon.py`**, then **`BUILD.bat`**.
+
 ## Optional: your own tray picture
 
-Put **`tray_icon.png`** next to the EXE (or next to `watchdog.py` if you run from source). Use a **transparent PNG**, about **64×64**. It replaces the default lightning icon.
+Put **`tray_icon.png`** next to the EXE (or next to `watchdog.py` if you run from source). Use a **transparent PNG**, about **64×64**. It replaces the default lightning icon in the **tray** (separate from the EXE file icon above).
 
 ---
 
