@@ -1,6 +1,6 @@
 # watchdog.spec
 # Build with: pyinstaller watchdog.spec
-# Output: dist/ProcessWatchdog.exe
+# Output: dist/VoltWatch.exe
 
 block_cipher = None
 
@@ -39,7 +39,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='ProcessWatchdog',
+    name='VoltWatch',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

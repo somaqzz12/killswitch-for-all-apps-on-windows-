@@ -1,10 +1,10 @@
 @echo off
 setlocal
-title Process Watchdog v3 - Build EXE
+title VoltWatch - Build EXE
 color 0A
 echo.
 echo  ================================================
-echo   Process Watchdog v3 - Build to EXE
+echo   VoltWatch - Build to EXE
 echo  ================================================
 echo.
 
@@ -28,7 +28,7 @@ echo  [2/3] Building EXE with PyInstaller...
 python -m PyInstaller watchdog.spec --clean --noconfirm
 echo.
 
-if not exist "dist\ProcessWatchdog.exe" (
+if not exist "dist\VoltWatch.exe" (
     echo  [ERROR] Build failed. Check output above for errors.
     pause & exit /b 1
 )
@@ -36,7 +36,7 @@ if not exist "dist\ProcessWatchdog.exe" (
 echo  [3/3] Done!
 echo.
 echo  ================================================
-echo   Output: dist\ProcessWatchdog.exe
+echo   Output: dist\VoltWatch.exe
 echo.
 echo   Share just that one file.
 echo   No Python needed on the target machine.
