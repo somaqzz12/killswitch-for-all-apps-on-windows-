@@ -8,12 +8,34 @@
 
 ## I just want the app (no coding)
 
-1. Open **[Releases](https://github.com/somaqzz12/killswitch-for-all-apps-on-windows-/releases)** on GitHub.
-2. Under the latest release, download **`ProcessWatchdog.exe`** (when a release is published with that file).
-3. Double-click it. Pick apps in the welcome screen. The icon appears in the tray near the clock.
-4. **Fully quit:** right-click the tray icon → **Exit**. Closing the window does **not** stop the tray app unless you exit from the tray.
+You need a single file: **`ProcessWatchdog.exe`**. Pick **one** path below (they all produce the same app).
 
-If there is **no EXE on Releases yet**, either ask the maintainer to attach one, or build it once on a PC with Python: run **`BUILD.bat`** → take **`dist\ProcessWatchdog.exe`**.
+### A) Download from Releases (simplest, when it exists)
+
+1. Open **[Releases](https://github.com/somaqzz12/killswitch-for-all-apps-on-windows-/releases)**.
+2. Open the **latest** release and download **`ProcessWatchdog.exe`**.
+
+If Releases is **empty** or has **no EXE attached yet**, use **B** or **C** — that is normal until the maintainer publishes a release.
+
+### B) Download from GitHub Actions (no Python needed)
+
+This uses the automated Windows build on GitHub.
+
+1. Open **[Actions → Build Windows EXE](https://github.com/somaqzz12/killswitch-for-all-apps-on-windows-/actions/workflows/build-exe.yml)**.
+2. Click **Run workflow** → branch **main** → **Run workflow** (you must be logged in and have permission on this repo).
+3. Wait for the run to finish (green check).
+4. Open that run → scroll to **Artifacts** → download **`ProcessWatchdog-windows`** (ZIP). Inside is **`ProcessWatchdog.exe`**.
+
+### C) Build on your own PC (needs Python once)
+
+1. Install **Python 3.10+** for Windows and clone or download this repo as a ZIP and extract it.
+2. Double-click **`BUILD.bat`** in the project folder.
+3. Take **`dist\ProcessWatchdog.exe`**.
+
+### After you have the EXE
+
+1. Double-click **`ProcessWatchdog.exe`**. Pick apps in the welcome screen. A **tray icon** appears near the clock.
+2. **Fully quit:** right-click the tray icon → **Exit**. Closing the dashboard window does **not** stop the background watchdog until you **Exit** from the tray.
 
 ---
 
@@ -31,7 +53,7 @@ If there is **no EXE on Releases yet**, either ask the maintainer to attach one,
 
 ### End users (EXE)
 
-Same steps as **“I just want the app”** above: Releases → `ProcessWatchdog.exe`.
+Same as **“I just want the app”** above: Releases **or** Actions artifact **or** `BUILD.bat` → `ProcessWatchdog.exe`.
 
 ### Developers (source)
 
