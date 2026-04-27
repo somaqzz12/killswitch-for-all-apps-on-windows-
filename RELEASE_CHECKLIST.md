@@ -5,7 +5,7 @@
 - Update `APP_VERSION` in `watchdog.py` if needed.
 - Test from source: `python watchdog.py`.
 - Build EXE locally: run `BUILD.bat`.
-- Verify `dist/VoltWatch.exe` launches and tray icon appears.
+- Verify `dist/ProcessWatchdog.exe` launches and tray icon appears.
 - Confirm `X` behavior and tray `Exit` behavior.
 - Confirm startup register/unregister works from Settings.
 
@@ -15,8 +15,8 @@
 - Create a version tag such as `v3.1.0`.
 - Push tag (`git push origin v3.1.0`).
 - Wait for GitHub Actions workflow **Build Windows EXE** to finish.
-- Download artifact `VoltWatch-windows`.
-- Create a GitHub Release and attach `VoltWatch.exe`.
+- Download artifact `ProcessWatchdog-windows`.
+- Create a GitHub Release and attach `ProcessWatchdog.exe`.
 
 ## Optional quality checks
 

@@ -1,10 +1,10 @@
 @echo off
 setlocal
-title VoltWatch - Build EXE
+title Process Watchdog - Build EXE
 color 0A
 echo.
 echo  ================================================
-echo   VoltWatch - Build to EXE
+echo   Process Watchdog - Build to EXE
 echo  ================================================
 echo.
 
@@ -28,15 +28,16 @@ echo  [2/3] Building EXE with PyInstaller...
 python -m PyInstaller watchdog.spec --clean --noconfirm
 echo.
 
-if not exist "dist\VoltWatch.exe" (
+if not exist "dist\ProcessWatchdog.exe" (
     echo  [ERROR] Build failed. Check output above for errors.
+    echo  [TIP] If you see "Access is denied", exit ProcessWatchdog.exe from the tray and try again.
     pause & exit /b 1
 )
 
 echo  [3/3] Done!
 echo.
 echo  ================================================
-echo   Output: dist\VoltWatch.exe
+echo   Output: dist\ProcessWatchdog.exe
 echo.
 echo   Share just that one file.
 echo   No Python needed on the target machine.

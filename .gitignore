@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 build/
+build_release/
 dist/
+dist_release/
 *.log
-voltwatch.log

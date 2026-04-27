@@ -1,10 +1,10 @@
 @echo off
 setlocal
-title VoltWatch - Setup
+title Process Watchdog - Setup
 color 0A
 echo.
 echo  ================================================
-echo   VoltWatch - First Time Setup
+echo   Process Watchdog - First Time Setup
 echo  ================================================
 echo.
 
@@ -31,7 +31,7 @@ if errorlevel 1 (
 )
 echo.
 
-echo  [3/3] Launching VoltWatch...
+echo  [3/3] Launching Process Watchdog...
 start "" pythonw "%~dp0watchdog.py"
 echo        Running in system tray.
 echo.
@@ -39,9 +39,9 @@ echo.
 echo  ================================================
 echo   Done!
 echo.
-echo   - Handshake screen: pick which stacks to watch
-echo   - VoltWatch lives in your system tray (look by the clock)
-echo   - Right-click tray — open the console / dashboard
+echo   - A welcome screen will appear to pick your apps
+echo   - Tray icon lives by the clock
+echo   - Right-click tray to open the dashboard
 echo   - Starts automatically with Windows
 echo  ================================================
 echo.
