@@ -1,0 +1,8 @@
+psutil
+pystray
+Pillow
+wmi
+pywin32
+customtkinter
+windows-toasts
+win10toast
